@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
-    <ImageView
+    <ImageView android:id="@+id/item_pacote_imagem"
         android:layout_width="0dp"
         android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -14,5 +14,51 @@
         app:layout_constraintVertical_bias="0.0"
         android:src="@drawable/sao_paulo_sp"
         android:scaleType="centerCrop"/>
+
+    <TextView android:id="@+id/item_pacote_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="São Paulo"
+        app:layout_constraintStart_toStartOf="@+id/item_pacote_imagem"
+        app:layout_constraintEnd_toEndOf="@id/item_pacote_imagem"
+        app:layout_constraintTop_toTopOf="@id/item_pacote_imagem"
+        app:layout_constraintBottom_toBottomOf="@id/item_pacote_imagem"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="14sp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+    <View android:id="@+id/item_pacote_divisor"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_pacote_imagem"/>
+
+    <TextView android:id="@+id/item_pacote_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 dias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/item_pacote_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 243,99"
+        app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
+        app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_dark"/>
 
 </android.support.constraint.ConstraintLayout>
