@@ -4,62 +4,84 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    
-    <ImageView android:id="@+id/item_pacote_imagem"
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_pacote_cardview"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:src="@sample/pacotes.json/pacotes/imagem"
-        android:scaleType="centerCrop"/>
-
-    <TextView android:id="@+id/item_pacote_local"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@sample/pacotes.json/pacotes/local"
-        app:layout_constraintStart_toStartOf="@+id/item_pacote_imagem"
-        app:layout_constraintEnd_toEndOf="@id/item_pacote_imagem"
-        app:layout_constraintTop_toTopOf="@id/item_pacote_imagem"
-        app:layout_constraintBottom_toBottomOf="@id/item_pacote_imagem"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:textSize="14sp"
         android:layout_margin="8dp"
-        android:padding="8dp"
-        android:background="@android:drawable/screen_background_dark_transparent"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"/>
-
-    <View android:id="@+id/item_pacote_divisor"
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/item_pacote_imagem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_pacote_imagem"/>
-
-    <TextView android:id="@+id/item_pacote_dias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="@sample/pacotes.json/pacotes/dias"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView android:id="@+id/item_pacote_preco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="@sample/pacotes.json/pacotes/preco"
-        app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
-        app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
-        android:textSize="20sp"
-        android:textColor="@android:color/holo_green_dark"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_pacote_imagem"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@sample/pacotes.json/pacotes/imagem" />
+
+            <TextView
+                android:id="@+id/item_pacote_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/item_pacote_imagem"
+                app:layout_constraintEnd_toEndOf="@id/item_pacote_imagem"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/item_pacote_imagem"
+                app:layout_constraintTop_toTopOf="@id/item_pacote_imagem"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="@sample/pacotes.json/pacotes/local" />
+
+            <View
+                android:id="@+id/item_pacote_divisor"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_imagem" />
+
+            <TextView
+                android:id="@+id/item_pacote_dias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
+                tools:text="@sample/pacotes.json/pacotes/dias" />
+
+            <TextView
+                android:id="@+id/item_pacote_preco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
+                tools:text="@sample/pacotes.json/pacotes/preco" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>
