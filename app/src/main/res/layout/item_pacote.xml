@@ -2,7 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     
     <ImageView android:id="@+id/item_pacote_imagem"
         android:layout_width="0dp"
@@ -12,13 +13,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/sao_paulo_sp"
+        tools:src="@sample/pacotes.json/pacotes/imagem"
         android:scaleType="centerCrop"/>
 
     <TextView android:id="@+id/item_pacote_local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="São Paulo"
+        tools:text="@sample/pacotes.json/pacotes/local"
         app:layout_constraintStart_toStartOf="@+id/item_pacote_imagem"
         app:layout_constraintEnd_toEndOf="@id/item_pacote_imagem"
         app:layout_constraintTop_toTopOf="@id/item_pacote_imagem"
@@ -43,7 +44,7 @@
     <TextView android:id="@+id/item_pacote_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2 dias"
+        tools:text="@sample/pacotes.json/pacotes/dias"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
@@ -55,7 +56,7 @@
     <TextView android:id="@+id/item_pacote_preco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$ 243,99"
+        tools:text="@sample/pacotes.json/pacotes/preco"
         app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
         app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
         android:textSize="20sp"
