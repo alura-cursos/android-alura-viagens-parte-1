@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:color/holo_purple" />
+        app:srcCompat="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/lista_pacotes_especiais"
@@ -45,15 +45,16 @@
         app:layout_constraintStart_toStartOf="@+id/lista_pacotes_especiais"
         app:layout_constraintTop_toBottomOf="@+id/lista_pacotes_especiais" />
 
-    <ListView android:id="@+id/lista_pacotes_listview"
+    <ListView
+        android:id="@+id/lista_pacotes_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_pacote"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:divider="@null"
         android:dividerHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lista_pacotes_banner_inicial"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:listitem="@layout/item_pacote" />
 
 </android.support.constraint.ConstraintLayout>
